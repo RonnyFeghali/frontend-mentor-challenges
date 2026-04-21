@@ -27,13 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](.![alt text](image.png))
-
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+(.![alt text](image.png))
 
 ## My process
 
