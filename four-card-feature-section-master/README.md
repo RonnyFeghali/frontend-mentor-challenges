@@ -6,6 +6,7 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -15,6 +16,11 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 - [Author](#author)
 
 ## Overview
+
+### Screenshot
+![Desktop design](image.png)
+![Hover state](image-1.png)
+![Mobile design](image-2.png)
 
 ### The challenge
 
