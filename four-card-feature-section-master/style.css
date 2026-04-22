@@ -1,0 +1,209 @@
+:root {
+    /* Primary */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+    --grey-500: hsl(234, 12%, 34%);
+    --grey-400: hsl(212, 6%, 44%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* ==========================================
+                Resets
+========================================== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red !important; */
+}
+
+/* ======================================= */
+
+body {
+    background-color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    flex: 1;
+    padding-top: 100px;
+}
+
+/* ==========================================
+                Header
+========================================== */
+header {
+    display: flex;
+    flex-direction: column;
+    margin: o auto;
+    color: var(--grey-500)
+}
+
+.title,
+.tagline,
+.desc {
+    text-align: center;
+}
+
+.title {
+    font-weight: 200;
+}
+
+.tagline {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.desc {
+    margin-top: 15px;
+    width: 500px;
+    color: var(--grey-400);
+}
+
+h3 {
+    color: var(--grey-500);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+                Hero
+========================================== */
+.cards-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 220px;
+    font-size: 0.95rem;
+    color: var(--grey-400);
+    box-shadow: 0 6px 10px 1px rgba(71, 71, 71, 0.105);
+    border-radius: 5px;
+    padding: 20px;
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(105%);
+    cursor: pointer;
+}
+
+.center-cards {
+    margin: 20px 50px;
+}
+
+#team-builder-card,
+#karma-card {
+    margin: 20px 0;
+}
+
+#team-builder-card {
+    border-top: 5px solid var(--red);
+}
+
+#karma-card {
+    border-top: 5px solid var(--orange);
+}
+
+#supervisor-card {
+    border-top: 5px solid var(--cyan);
+}
+
+#calc-card {
+    border-top: 5px solid var(--blue);
+}
+
+img {
+    position: absolute;
+    bottom: 50px;
+    right: 35px;
+    left: auto;
+    top: auto;
+}
+
+/* ==========================================
+                Footer
+========================================== */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 3px solid rgba(83, 83, 83, 0.559);
+    border-image: linear-gradient(to right, var(--cyan), var(--red), var(--orange), var(--blue)) 1;
+}
+
+footer a {
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+footer a:focus {
+    outline: 1px solid gray;
+}
+
+.separator {
+    margin: 0 15px;
+}
+
+
+/* ====================================
+                Mobile
+==================================== */
+@media (max-width: 600px) {
+    body {
+        min-height: 100dvh;
+        width: 100%;
+    }
+
+    main {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .desc {
+        width: 90%;
+    }
+
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .center-cards {
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
