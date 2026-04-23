@@ -1,0 +1,245 @@
+/* =====================
+   Custom Properties
+   ===================== */
+:root {
+  /* Primary */
+  --light-red: hsl(0, 100%, 67%);
+  --orange-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradient - Result panel background */
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+
+  /* Gradient - Score circle */
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --darkgray-blue: hsl(224, 30%, 27%);
+}
+
+/* =====================
+   Reset
+   ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================
+   Base
+   ===================== */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--pale-blue);
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* =====================
+   Layout
+   ===================== */
+main {
+  display: flex;
+  border-radius: 15px;
+  background-color: var(--white);
+  width: 500px;
+}
+
+.results,
+.summary {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* =====================
+   Results Panel
+   ===================== */
+.results {
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(var(--violet-blue), var(--persian-blue));
+  border-radius: 50%;
+  padding: 30px;
+  margin: 10px auto;
+}
+
+/* =====================
+   Summary Panel
+   ===================== */
+.summary {
+  background-color: var(--white);
+  gap: 10px;
+  padding: 20px 25px;
+}
+
+.summary-title {
+  margin-right: auto;
+  font-size: 1.1rem;
+
+}
+
+.reaction,
+.memory,
+.verbal,
+.visual {
+  font-size: 0.9rem;
+  margin-right: auto;
+}
+
+.reaction {
+  color: var(--light-red);
+}
+
+.memory {
+  color: var(--orange-yellow);
+}
+
+.verbal {
+  color: var(--green-teal);
+}
+
+.visual {
+  color: var(--darkgray-blue);
+}
+
+.reaction-title {
+  background-color: color-mix(in srgb, var(--light-red) 10%, transparent);
+}
+
+.memory-title {
+  background-color: color-mix(in srgb, var(--orange-yellow) 10%, transparent);
+}
+
+.verbal-title {
+  background-color: color-mix(in srgb, var(--green-teal) 10%, transparent);
+}
+
+.visual-title {
+  background-color: color-mix(in srgb, var(--cobalt-blue) 10%, transparent);
+}
+
+img {
+  width: 15px;
+  height: 15px;
+}
+
+.summary-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 6px;
+  width: 100%;
+  gap: 10px;
+ }
+
+.continue-btn {
+  padding: 10px 10px;
+  text-align: center;
+  background-color: var(--darkgray-blue);
+  color: var(--white);
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+ }
+
+.continue-btn:active {
+  transform: scale(0.95);
+ }
+
+
+.max-score-two,
+.reaction-nums,
+.memory-nums,
+.verbal-nums,
+.visual-nums {
+  font-size: 0.9rem;
+}
+
+.max-score-two {
+  color: gray;
+}
+
+/* =====================
+   Typography
+   ===================== */
+.your-result {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--light-lavender);
+}
+
+.score {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.max-score {
+  font-size: 0.8rem;
+  color: var(--light-lavender);
+}
+
+.result-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 10px 0;
+  color: var(--white);
+}
+
+.result-description {
+  font-size: 0.8rem;
+  color: var(--light-lavender);
+}
+
+.percentage-score {
+  color: var(--white);
+}
+
+/* =====================
+   Footer
+   ===================== */
+
+footer a {
+  text-decoration: none;
+  color: var(--cobalt-blue);  
+}
+
+.separator {
+  margin: 0 10px;
+}
+
+/* =====================
+   Small screens
+   ===================== */
+
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+    width: 95%;
+  }
+}

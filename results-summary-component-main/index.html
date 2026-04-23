@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Results summary component</title>
+
+</head>
+<body>
+
+  <main>
+    <section class="results">
+      <h3 class="your-result">Your Result</h3>
+      <div class="circle">
+        <p class="score">76</p>
+        <p class="max-score">of 100</p>
+      </div>
+      <div>
+        <h3 class="result-title">Great</h3>
+        <p class="result-description">
+          You scored higher than <span class="percentage-score">65%</span> of the people who have taken these tests.
+        </p>
+      </div>
+    </section>
+
+    <section class="summary">
+      <h2 class="summary-title">Summary</h2>
+
+      <div class="reaction-title summary-section">
+        <img src="assets/images/icon-reaction.svg" alt="flash icon">
+        <p class="reaction">Reaction</p>
+        <p class="reaction-nums">0</p><span class="max-score-two"> / 100</span>
+      </div>
+
+      <div class="memory-title summary-section">
+        <img src="assets/images/icon-memory.svg" alt="brain icon">
+        <p class="memory">Memory</p>
+        <p class="memory-nums">0</p><span class="max-score-two"> / 100</span>
+      </div>
+
+      <div class="verbal-title summary-section">
+        <img src="assets/images/icon-verbal.svg" alt="speach bubble icon">
+        <p class="verbal">Verbal</p>
+        <p class="verbal-nums">0</p><span class="max-score-two"> / 100</span>
+      </div>
+
+      <div class="visual-title summary-section">
+        <img src="assets/images/icon-visual.svg" alt="eye icon">
+        <p class="visual">Visual</p>
+        <p class="visual-nums">0</p><span class="max-score-two"> / 100</span>
+      </div>
+
+      <button class="continue-btn" aria-label="continue button">Continue</button>
+    </section>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>
+    <span class="separator">|</span>
+    Coded by <a href="#">Ronny Feghali</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
