@@ -1,0 +1,285 @@
+:root {
+    /* Primary */
+    --green-400: hsl(172, 67%, 45%);
+
+    /* Neutral */
+    --green-900: hsl(183, 100%, 15%);
+    --green-800: hsl(183, 79%, 24%);
+    --grey-500: hsl(186, 14%, 43%);
+    --grey-400: hsl(184, 14%, 56%);
+    --grey-200: hsl(185, 41%, 84%);
+    --grey-50: hsl(189, 47%, 97%);
+    --white: hsl(0, 100%, 100%);
+
+    /* Font */
+    --font-ui: 'Space Mono', sans-serif;
+}
+
+/* ==================================
+            Global Reset
+   ================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================================
+              Layout
+   ================================== */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--grey-200);
+    font-family: var(--font-ui);
+}
+
+.main-container {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.calculator-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.app-title {
+    margin-bottom: 50px;
+    color: var(--green-900);
+    font-weight: 400;
+    font-size: 0.5rem;
+    letter-spacing: 0.2rem;
+}
+
+/* ==================================
+              Panels
+   ================================== */
+.left-panel,
+.right-panel {
+    flex: 1;
+}
+
+.right-panel {
+    background-color: var(--green-900);
+    border-radius: 15px;
+    padding: 20px 25px;
+}
+
+/* ==================================
+              Labels
+   ================================== */
+.bill-title,
+.tip-title,
+.people-title {
+    font-size: 0.8rem;
+    color: var(--green-900);
+    margin-bottom: 8px;
+}
+
+.not-zero {
+    display: none;
+    color: hsl(0, 100%, 35%);
+    font-size: 0.8rem;
+}
+
+/* ==================================
+            Input Fields
+   ================================== */
+.input-wrapper {
+    position: relative;
+}
+
+.top-wrapper {
+    margin-bottom: 30px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bill-field,
+.people-field {
+    width: 100%;
+    padding: 8px 12px 8px 36px;
+    text-align: right;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--grey-50);
+    font-size: 1rem;
+}
+
+.bill-field::placeholder,
+.people-field::placeholder {
+    color: var(--grey-400);
+}
+
+.bill-field:focus,
+.people-field:focus {
+    outline: 2px solid var(--green-400);
+}
+
+.titles {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ==================================
+            Tip Buttons
+   ================================== */
+.tip-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tip-btn {
+    background-color: var(--green-900);
+    color: var(--grey-50);
+    border: none;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.tip-btn.active {
+    background-color: var(--grey-200);
+    color: var(--green-900);
+}
+
+.tip-btn:hover {
+    background-color: var(--grey-200);
+    color: var(--green-900);
+    cursor: pointer;
+}
+
+.tip-custom {
+    background-color: var(--grey-50);
+    color: var(--green-900);
+    border: none;
+    text-align: right;
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    padding-right: 10px;
+}
+
+.tip-custom::placeholder {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--green-900);
+}
+
+.tip-custom:focus {
+    outline: 2px solid var(--green-400);
+}
+
+/* ==================================
+              Results
+   ================================== */
+.tip-wrapper,
+.total-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tip-wrapper-top {
+    margin-bottom: 30px;
+}
+
+.tip-wrapper-bottom {
+    margin-bottom: 70px;
+}
+
+.amount-title,
+.total-title {
+    font-size: 0.8rem;
+    color: var(--grey-50);
+}
+
+.per-person {
+    color: var(--grey-400);
+    font-size: 0.7rem;
+}
+
+.total-amount {
+    color: var(--green-400);
+    font-size: 1.8rem;
+}
+
+.total-amount::before {
+    content: "$";
+    font-weight: 700;
+}
+
+/* ==================================
+            Reset Button
+   ================================== */
+.reset-btn {
+    width: 100%;
+    height: 40px;
+    background-color: var(--green-800);
+    border: none;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    color: var(--green-900);
+    border-radius: 5px;
+}
+
+.reset-btn:hover {
+    background-color: var(--grey-200);
+    cursor: pointer;
+}
+
+/* ==================================
+              Mobile
+   ================================== */
+@media (max-width: 600px) {
+    body {
+        justify-content: flex-start;
+    }
+
+    .app-title {
+        margin: 40px 0 30px;
+    }
+
+    .main-container {
+        border-radius: 15px 15px 0 0;
+        padding: 30px 20px;
+        min-height: 100vh;
+    }
+
+    .calculator-container {
+        flex-direction: column;
+    }
+
+    .tip-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==================================
+            Footer
+   ================================== */
+footer a {
+    text-decoration: none;
+    color: var(--green-900);
+}
+
+.separator {
+    color: var(--grey-500);
+}
