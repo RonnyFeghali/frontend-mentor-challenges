@@ -1,0 +1,356 @@
+/* ================================
+   Custom Properties
+   ================================ */
+:root {
+    --gradient: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --red-400: hsl(0, 100%, 66%);
+    --white: hsl(0, 100%, 100%);
+    --gray-200: hsl(270, 3%, 87%);
+    --gray-400: hsl(212, 12%, 71%);
+    --purple-950: hsl(278, 68%, 11%);
+
+    --font-family: 'Space Grotesk', sans-serif;
+    --font-size-base: 18px;
+    --font-weight-base: 500;
+}
+
+
+/* ================================
+   Reset
+   ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red !important; */
+}
+
+
+/* ================================
+   Base / Layout
+   ================================ */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-base);
+    background-color: var(--white);
+    background-image: url("./images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0% 0%;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    min-width: 100%;
+}
+
+
+/* ================================
+   Cards Section
+   ================================ */
+.cards-container {
+    width: 500px;
+}
+
+/* Card Front */
+.card-front {
+    display: flex;
+    flex-direction: column;
+    background-image: url("./images/bg-card-front.png");
+    background-size: cover;
+    width: 400px;
+    height: 220px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    gap: 40px;
+    padding: 20px 30px;
+}
+
+.decorative {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+#circle-white {
+    background-color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#circle-empty {
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+#card-number {
+    font-size: 20px;
+    color: var(--white);
+    letter-spacing: 0.3rem;
+    margin: 0 auto;
+}
+
+.name-and-exp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 12px;
+    color: var(--white);
+    letter-spacing: 0.1rem;
+}
+
+#card-name {
+    text-transform: uppercase;
+}
+
+/* Card Back */
+.card-back {
+    position: relative;
+    background-image: url("./images/bg-card-back.png");
+    background-size: cover;
+    width: 400px;
+    height: 220px;
+    border-radius: 10px;
+    margin-left: auto;
+    color: var(--white);
+}
+
+#card-back-placeholder {
+    position: absolute;
+    top: 44%;
+    right: 50px;
+    font-size: 16px;
+}
+
+
+/* ================================
+   Form
+   ================================ */
+.form-container {
+    max-width: 380px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+label,
+fieldset legend {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.1rem;
+    color: var(--purple-950);
+    margin-bottom: 3px;
+}
+
+
+input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--gray-200);
+    padding: 0 10px;
+}
+
+.error-msg {
+    font-size: 11px;
+    color: var(--red-400);
+    margin-top: 4px;
+}
+
+.input-error {
+    border-color: var(--red-400);
+}
+
+input::placeholder {
+    font-size: 14px;
+    color: var(--gray-400);
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    flex: 2;
+}
+
+.exp-cvc-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* grid puts Month label / Year label in row 1, MM input / YY input in row 2 */
+.exp-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 10px;
+}
+
+.cvc-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.confirm-btn,
+.continue-btn {
+    width: 100%;
+    height: 50px;
+    background-color: var(--purple-950);
+    border-radius: 10px;
+    color: var(--white);
+    letter-spacing: 0.1rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.confirm-btn:hover,
+.continue-btn:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+
+/* ================================
+   Completed state
+   ================================ */
+.completed-state {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkmark-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient);
+}
+
+.completed-state h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    color: var(--purple-950);
+}
+
+.completed-state p {
+    font-size: 0.9rem;
+    margin: 15px 0;
+    color: var(--gray-400);
+    font-weight: 400;
+}
+
+
+
+/* ================================
+   Footer
+   ================================ */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    font-size: 16px;
+    gap: 10px;
+    font-weight: 400;
+    padding: 5px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(114, 1, 253);
+}
+
+/* ================================
+   Media
+   ================================ */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    body {
+        background-image: url("./images/bg-main-mobile.png");
+        background-size: 100% auto;
+        background-position: top;
+    }
+    
+    .cards-container {
+        position: relative;
+        width: 100%;
+        height: 240px;
+    }
+
+    .card-front,
+    .card-back {
+        position: absolute;
+        width: 280px;
+        height: 154px;
+        margin: 0;
+    }
+
+    .card-back {
+        top: 0;
+        right: 5%;
+        z-index: 1;
+    }
+
+    .card-front {
+        top: 100px;
+        left: 5%;
+        z-index: 2;
+    }
+
+    #card-number {
+        font-size: 12px;
+    }
+
+    .form-container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+}

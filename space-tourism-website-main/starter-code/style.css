@@ -1,0 +1,423 @@
+/* ==================================
+          Variables & Reset
+   ================================== */
+:root {
+    /* Colors */
+    --color-dark: hsl(230, 35%, 7%);
+    --color-light: hsl(231, 77%, 90%);
+    --color-white: hsl(0, 0%, 100%);
+
+    /* Fonts */
+    --font-serif: 'Bellefair', serif;
+    --font-sans: 'Barlow Condensed', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================================
+         Layout & Background
+   ================================== */
+html {
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-dark);
+}
+
+html.home        { background-image: url("./assets/home/background-home-desktop.jpg"); }
+html.destination { background-image: url("./assets/destination/background-destination-desktop.jpg"); }
+html.crew        { background-image: url("./assets/crew/background-crew-desktop.jpg"); }
+html.technology  { background-image: url("./assets/technology/background-technology-desktop.jpg"); }
+
+body {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+}
+
+/* ==================================
+            Header & Nav
+   ================================== */
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    width: 35%;
+    top: 50%;
+    left: 240px;
+}
+
+.nav-top {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    padding: 2rem 15rem;
+}
+
+.nav-top ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-top a {
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.nav-top a span {
+    font-weight: 700;
+}
+
+html.home .nav-top li.home a,
+html.destination .nav-top li.destination a,
+html.crew .nav-top li.crew a,
+html.technology .nav-top li.technology a {
+    border-bottom: 3px solid var(--color-white);
+}
+
+.nav-top a:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+/* ==================================
+            Home Page
+   ================================== */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex: 1;
+    padding: 0 15% 10rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-label {
+    color: var(--color-light);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content h1 {
+    font-family: var(--font-serif);
+    text-transform: uppercase;
+    font-size: 9rem;
+}
+
+.hero-description {
+    color: var(--color-light);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 350px;
+    opacity: 0.7;
+}
+
+.btn-explore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+}
+
+.btn-explore:hover {
+    box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.1);
+}
+
+/* ==================================
+          Destination Page
+   ================================== */
+
+html.destination main {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3rem 15% 5rem;
+}
+
+.destination-content {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.destination-title {
+    color: var(--color-light);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 1.4rem;
+    margin-bottom: 10rem;
+    font-weight: 400;
+}
+
+.destination-title span {
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+.nav-destination ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.nav-destination a {
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+} 
+
+.nav-destination a.active {
+    border-bottom: 3px solid var(--color-white);
+}
+
+.nav-destination a:hover {
+    border-bottom: 3px solid rgba(255,255,255, 0.5);
+}
+
+#destination-name {
+    font-family: var(--font-serif);
+    font-size: 6rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+#destination-description {
+    color: var(--color-light);
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    max-width: 380px;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+
+.destination-info hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 2rem;
+}
+
+#stats {
+    display: flex;
+    gap: 3rem;
+}
+
+#stats div p:first-child {
+    opacity: 0.7;
+    color: var(--color-light);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+#stats div p:last-child {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+/* ==================================
+             Crew Page
+   ================================== */
+html.crew main {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3rem 15% 0;
+}
+
+.crew-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.crew-title {
+    color: var(--color-light);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+#crew-role {
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+}
+
+#crew-name {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+#crew-bio {
+    color: var(--color-light);
+    line-height: 1.8;
+    font-size: 1.2rem;
+    max-width: 380px;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+
+#crew-dots button {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+#crew-dots button.active {
+    background-color: var(--color-white);
+}
+
+.crew-image img {
+    height: 500px;
+    object-fit: contain;
+}
+
+/* ==================================
+          Technology Page
+   ================================== */
+html.technology main {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3rem 0 0 15%;
+}
+
+.space-launch-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 4rem;
+}
+
+.space-launch-numbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.space-launch-numbers button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    color: var(--color-white);
+    font-size: 1.8rem;
+    font-family: var(--font-serif);
+    cursor: pointer;
+}
+
+.space-launch-numbers button.active {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+
+.space-launch-image {
+    margin-left: auto;
+    margin-right: 5rem;
+}
+
+.space-launch-numbers button.active {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+
+.space-launch-numbers button:hover {
+    border-color: var(--color-white);
+    cursor: pointer;
+}
+
+#tech-label {
+    color: var(--color-light);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+
+#tech-name {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+#tech-description {
+    color: var(--color-light);
+    line-height: 1.8;
+    font-size: 1.2rem;
+    max-width: 380px;
+    opacity: 0.7;
+}
+
+.space-launch-image img {
+    width: 450px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.space-launch-title {
+    color: var(--color-light);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+
+/* ==================================
+           Media Queries
+   ================================== */

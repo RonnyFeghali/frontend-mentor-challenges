@@ -5,6 +5,7 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 ## Table of contents
 
 - [Overview](#overview)
+  - [Level](#level)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
@@ -18,6 +19,9 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 
 
 ## Overview
+
+### Level
+**Newbie**
 
 ### The challenge
 
